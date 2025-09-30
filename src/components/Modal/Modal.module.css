@@ -21,7 +21,7 @@
 }
 
 .modal {
-  background: #e24949;
+  background: #50432d;
   border-radius: 12px;
   padding: 24px;
   width: 400px;
@@ -44,6 +44,7 @@
 }
 
 .title {
+  color: #e7d4bb;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 16px;
@@ -69,9 +70,9 @@
   outline: none;
   border: 2px solid rgb(66, 45, 7)
 }
-/* Сток кнопку можно детальнее стилизовать через обёртку label */
+/* Стандартную кнопку можно детальнее стилизовать через обёртку label */
 .fileInput::file-selector-button {
-  background: #545c0a;
+  background: #29281e;
   color: white;
   border: none;
   padding: 6px 12px;
@@ -100,16 +101,18 @@
 }
 
 .submit {
-  background: #917015;
+  background: #29281e;
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .submit:hover {
-  background: #0056b3;
+  box-shadow: 0 8px 20px rgba(226, 215, 198, 0.4); /* синяя мягкая тень */
+  transform: translateY(-2px);
 }
 
 .notificationOverlay {

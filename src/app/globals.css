@@ -76,40 +76,6 @@ h6 {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.navigation {
-	position: sticky;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 20;
-
-	display: flex;
-	gap: 0.6rem;
-	align-items: center;
-
-	width: max-content;
-	border-radius: 100px;
-	padding: 10px 16px;
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	background: rgba(255, 255, 255, 0.04);
-	color: var(--text);
-
-	backdrop-filter: saturate(130%) blur(5px);
-}
-
-.nav-link {
-	color: var(--text);
-	text-decoration: none;
-	padding: 8px 12px;
-	border-radius: 999px;
-	transition: 150ms ease;
-}
-
-.nav-link:hover {
-	color: var(--text-light);
-	background: rgba(255, 255, 255, 0.04);
-}
-
 .buttons-wrapper {
 	display: flex;
 	gap: 10px;
@@ -138,12 +104,16 @@ h6 {
 }
 
 .btn-modal {
-  transition: background 0.3s ease, box-shadow 0.3s ease
+	color: var(--text-light);
+	background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+	backdrop-filter: saturate(130%) blur(7px);
 }
 
 .btn-modal:hover {
-	box-shadow: 0 2px 6px rgba(153, 61, 206, 0.5);
-	background: #ec4545;
+	color: #2e2b22;
+	box-shadow: 0 2px 6px rgba(254, 251, 255, 0.5);
+	background: #ffdfa5;
 }
 
 .page {
@@ -195,7 +165,6 @@ h6 {
 .users-list .item {
 	border-radius: 0px;
 	border-bottom: 0px;
-
 	backdrop-filter: blur(5px);
 }
 
@@ -208,17 +177,6 @@ h6 {
 	border-bottom-right-radius: 12px;
 }
 
-@media (max-width: 600px) {
-	.navigation{
-		transform: translateX(-28px);
-	}
-}
-
-@media (max-width: 400px) {
-	.navigation{
-		transform: translateX(-3px);
-	}
-}
 
 @media (min-width: 700px) {
 	.grid {
@@ -244,11 +202,6 @@ h6 {
 	transition: 150ms ease;
 }
 
-.card:hover {
-	border-color: rgba(47, 227, 154, 0.35);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 0 6px var(--ring);
-}
-
 .card--user-details {
 	display: grid;
 	grid-template-columns: 140px 1fr;
@@ -266,14 +219,14 @@ h6 {
 	border: 1px solid rgba(255, 255, 255, 0.07);
 	text-decoration: none;
 	color: var(--text);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .item:hover {
-	background: rgba(255, 255, 255, 0.05);
-	border-color: rgba(47, 227, 154, 0.35);
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+	background: rgba(44, 41, 11, 0.3);
 	padding-bottom: 14px;
+	box-shadow: 0 8px 20px rgba(226, 215, 198, 0.4);
+  transform: translateY(-4px);
 }
 
 .item-title {
@@ -312,6 +265,8 @@ h6 {
 }
 
 .bordered-wrapper {
+	border-radius: 100px;
+	backdrop-filter: saturate(120%) blur(6px);
 	border: 1px solid #ffffff3c;
 	padding: 30px;
 }
@@ -328,7 +283,7 @@ h6 {
 	width: 48px;
 	height: 48px;
 	border: 5px solid #fff;
-	border-bottom-color: #ff3d00;
+	border-bottom-color: #2e2b22;
 	border-radius: 50%;
 	display: inline-block;
 	box-sizing: border-box;

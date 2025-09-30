@@ -3,9 +3,9 @@ const ContactsPage = () => {
     <section className="content">
       <h2 className="section-title">Contacts</h2>
       <p>
-        Email: kujsfdhjhkgfhsd <br/>
-        Tel: 62437804623798 <br/>
-        Adress: jhsdkjshkjfhksj
+        Email: lishicki34@mail.ru <br/>
+        Tel: 8-999-280-09-98 <br/>
+        Adress: г. Мурманск
       </p>
     </section>
   );
