@@ -1,14 +1,17 @@
 import Link from "next/link";
 
+export const revalidate = 60;
+
 async function getUsers() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
-    cache: "no-store"
+    next: { revalidate: 60 }
   });
-  if (!res.ok) throw new Error("Failed to fatch users");
+
+  if (!res.ok) throw new Error("Failed to fetch users");
   return res.json();
 }
 
-const UserItem = ({user}) => {
+const UserItem = ({ user }) => {
   return (
     <Link href={`/users/${user.id}`} className="item">
       <div>
@@ -21,14 +24,15 @@ const UserItem = ({user}) => {
 };
 
 const UsersPage = async () => {
-
   const users = await getUsers();
 
   return (
     <section className="content">
       <h2 className="section-title">Users</h2>
       <div className="users-list">
-      {users.map((user) => <UserItem key={user.id} user={user}/>)}
+        {users.map((user) => (
+          <UserItem key={user.id} user={user} />
+        ))}
       </div>
     </section>
   );
